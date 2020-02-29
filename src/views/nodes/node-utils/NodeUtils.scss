@@ -1,0 +1,86 @@
+//formatting for resize button (bottom right corner)
+.resize {
+    z-index: 9999;
+    background: #31595e;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    cursor: se-resize;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #31595e;
+    height: 20px;
+    cursor: move;
+}
+
+//formatting for close button (top right)
+.close {
+    z-index: 9999;
+    background-image: url(https://narrative.so/static/close-icon-white-4db08d3b63ac402ff1818b58026fd284.png);
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.zoom-in{
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 30;
+    cursor: zoom-in;
+}
+
+.zoom-out{
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 60;
+    cursor: zoom-out;
+}
+
+.make-link {
+    position: absolute;
+    z-index: 9999;
+    background-image: url(https://www.freeiconspng.com/uploads/link-icon-png-14.png);
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    bottom: -5;
+    left: -5;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.links-container {
+    position: absolute;
+    top: 20px;
+    height: 20px;
+}
+
+.link {
+    display: inline-block;
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

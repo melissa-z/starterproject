@@ -2,7 +2,17 @@ import { computed, observable, action } from "mobx";
 import { NodeStore } from "./NodeStore";
 import { Utils } from "../Utils";
 
-export class NodeCollectionStore extends NodeStore {
+export class NewCollectionStore extends NodeStore {
+    constructor(initializer: Partial<NewCollectionStore>) {
+        super();
+        Object.assign(this, initializer);
+    }
+
+    @observable
+    public Width: number = 450;
+
+    @observable
+    public Height: number = 300;
 
     @observable
     public Scale: number = 1;
@@ -23,7 +33,7 @@ export class NodeCollectionStore extends NodeStore {
     public get GridTransform(): string {
         return "translate(0px,0px) scale(" + this.Scale + "," + this.Scale + ")";
     }
-
+    
     //add nodes to the store
     @action
     public AddNodes(stores: NodeStore[]): void {
@@ -118,6 +128,9 @@ export class NodeCollectionStore extends NodeStore {
 
     @observable
     public isTopLevel = false;
+
+    @observable
+    public Title: string;
 
     @observable
     public innerX: number = 0;

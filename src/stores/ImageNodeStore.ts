@@ -1,16 +1,17 @@
 import { observable } from "mobx";
 import { NodeStore } from "./NodeStore";
 
-export class StaticTextNodeStore extends NodeStore {
+export class ImageNodeStore extends NodeStore {
 
-    constructor(initializer: Partial<StaticTextNodeStore>) {
+    constructor(initializer: Partial<ImageNodeStore>) {
         super();
         Object.assign(this, initializer);
     }
 
     @observable
-    public Title: string = "";
+    public Title: string;
 
     @observable
-    public Text: string = "";
+    public Url: string;
+
 }

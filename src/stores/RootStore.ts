@@ -13,4 +13,4 @@ export class RootStore {
     public static get Instance():RootStore {
         return this._instance || (this._instance = new this());
     }
-}
+}  
